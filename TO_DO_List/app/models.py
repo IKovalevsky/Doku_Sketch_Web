@@ -13,4 +13,4 @@ class Task(models.Model):
         return self.title
 
     class Meta:
-        article_belongs_to = 'user'
+        order_with_respect_to = 'user'

@@ -7,7 +7,7 @@ class Task(models.Model):
     description = models.TextField(null= True, blank=True)
     complete = models.BooleanField(default= False)
     time_created = models.DateTimeField(auto_now_add= True)
-    file_task = models.FileField(upload_to="uploads/%Y/%m/%d/")
+    file_task = models.FileField(blank=True, upload_to="uploads/%Y/%m/%d/")
 
     def __str__(self) -> str:
         return self.title
